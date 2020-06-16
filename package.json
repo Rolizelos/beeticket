@@ -1,10 +1,10 @@
 {
   "name": "hello-express",
   "version": "1.0.0",
-  "description": "chimp#0110'in namı değer temiz altyapısı.",
-  "main": "chimp.js",
+  "description": "Ticket Tool",
+  "main": "bot.js",
   "scripts": {
-    "start": "node chimp.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "chalk": "^4.0.0",
@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "keywords": [
-    "chimp",
-    "chimp#0110"
+    "tool",
+    "ticket"
   ]
 }

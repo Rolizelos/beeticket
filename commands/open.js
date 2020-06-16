@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const data = require('quick.db')
 
-exports.run = async (client, message, args) => {// chimp#0110
+exports.run = async (client, message, args) => {
 const prefix = await data.fetch(`prefix.${message.guild.id}`) || client.ayarlar.prefix;
 const ad = await data.fetch(`numara.${message.channel.id}`)
 if(message.channel.name === `ticket-${ad}` || message.channel.name === `closed-${ad}`) {
@@ -11,7 +11,7 @@ message.delete()
 
 message.channel.send(new Discord.RichEmbed()
 .setColor('#ffff00')
-.setDescription(`Bilet ${message.author} tarafından açıldı.`))
+.setDescription(`Ticket ${message.author} tarafından açıldı.`))
 message.channel.setName(`ticket-${ad}`)
 
 } else { return message.channel.send(`Bu komutu bir bilet kanalında kullanın.`) }
