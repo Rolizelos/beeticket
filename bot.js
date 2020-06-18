@@ -8,7 +8,7 @@ const http = require("http");
 const express = require("express");
 require("./util/eventLoader")(client);
 
-client.ayarlar = { "token": "NzE1NDU5NTgxNTg0NjA1Mjk3.XuieqQ.CCwXZMO5EcCcnpM1Z1--e50_Egw", "prefix": ".", "sahip": "632925226082107402" }
+client.ayarlar = { "token": "NzE1NDU5NTgxNTg0NjA1Mjk3.XushIw.OLioD2O3R-_HWFGBf05KPyDXhT0", "prefix": "!", "sahip": "632925226082107402" }
 
 const app = express();
 app.get("/", (request, response) => {
@@ -109,6 +109,6 @@ var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g
 client.login(client.ayarlar.token);
 
 client.on('ready', async () => {
-client.user.setActivity(`Ticket Bot`)
+client.user.setActivity(`Ticket Bot Altyapı by CrawL`)
 client.user.setStatus('online')
 })

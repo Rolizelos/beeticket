@@ -64,4 +64,4 @@ exports.conf = {
 
 exports.help = {
   name: 'ekle'
-};// codare
+};

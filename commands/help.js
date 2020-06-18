@@ -60,4 +60,4 @@ exports.conf = {
 
 exports.help = {
   name: 'yardım'
-};// codare
+};

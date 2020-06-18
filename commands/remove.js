@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const data = require('quick.db')
 
-exports.run = async (client, message, args) => {// chimp#0110
+exports.run = async (client, message, args) => {
 const prefix = await data.fetch(`prefix.${message.guild.id}`) || client.ayarlar.prefix;
   
 if(!args[0]) {
@@ -63,4 +63,4 @@ exports.conf = {
 
 exports.help = {
   name: 'sil'
-};// codare
+};
