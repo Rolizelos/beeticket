@@ -24,7 +24,7 @@ const dnn = await data.fetch(`asd.${message.guild.id}.${sd}.${author.id}`)
 if(dnn) return author.send(new Discord.RichEmbed()
                                   .setColor('RED')
                                   .setDescription(`Bilet limitine ulaştınız: 1/1`))
-data.add(`numara.${message.guild.id}`, 1)
+data.add(`numara.${message.guild.id}`, 5)
 const as = await data.fetch(`numara.${message.guild.id}`)
 message.guild.createChannel(`ticket-${as}`).then(async s => {
 data.add(`numara.${s.id}`, as)
