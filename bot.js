@@ -8,7 +8,7 @@ const http = require("http");
 const express = require("express");
 require("./util/eventLoader")(client);
 
-client.ayarlar = { "token": "NzE1NDU5NTgxNTg0NjA1Mjk3.XushIw.OLioD2O3R-_HWFGBf05KPyDXhT0", "prefix": "!", "sahip": "632925226082107402" }
+client.ayarlar = { "token": "NzM2OTg4Njk2NDQ4MDczNzI4.Xx20NQ.LC3Ku9qnAaSqnWSN_bA8tVgteK0", "prefix": "!", "sahip": "632925226082107402" }
 
 const app = express();
 app.get("/", (request, response) => {
