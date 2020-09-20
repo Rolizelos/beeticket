@@ -1,35 +1,33 @@
 const Discord = require('discord.js');
 const data = require('quick.db')
-
 exports.run = async (client, message, args) => {
 const prefix = await data.fetch(`prefix.${message.guild.id}`) || client.ayarlar.prefix;
-  
-const embed = new Discord.RichEmbed()
-                .setColor('GOLD')
-        .setFooter(`${message.author.username} Başarıyla Yardım Komutunu Kullandı!`, message.author.avatarURL)
-        .setAuthor('Ticket Bot Yardım Menüsü')
-        .setThumbnail('https://cdn.discordapp.com/avatars/710115789537017926/df3332096163de41401e2c8b317fab8f.png?size=2048')
-        .setDescription('<a:saklan:752896867683270778> Botu Davet Etmek İçin'+ prefix + 'davet yazabilirisiniz.',false)
-        .addField('**__Ekle__**','<a:settings:752896916139802727>'+ prefix + ' `ekle @rol #kanal` Ticket a başka birisini/rolü eklersiniz.',true )
-        .addField('**__Sil__**','<a:sguad:720578780422340628>'+ prefix + '  `sil @etiket #kanal` Ticket a ekli birisini/rolü silersiniz.',true)
-        .addField('**__Kapat__**','<a:selam:752896916995571985>'+ prefix + ' `kapat` Ticket ı kapatırsınız.',true)
-        .addField('**__Aç__**',prefix + ' `aç @etiket #kanal` Ticket ı açarsınız.',true)
-        .addField('**__Bilet Sil__**',prefix + ' `bilet-sil` Ticket ı silersiniz.',true)
-        .addField('**__Ping__**',prefix + ' `ping` Botun Pingini Gösterir.',true)
-        .addField('**__Ticket Kanal__**',prefix + '  `ticket-kanal [ayarla/sıfırla] (kanal)` Ticket Kanalı Ayarlarınız.',true)
-        .addField('**__Ticket__**',prefix + '  `ticket gönder` Ticket Mesajı Yolar.',false)
-        .addField('**__Bilgilendirme__**',prefix + '  `davet` | Botu Sununuya Davet Edersiniz',true)
-message.channel.send(embed)  }  
-
-  
-
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: [],
-  permLevel: 0
+const embed = new Discord.RichEmbed()///Gweep-creative
+                .setColor('GOLD')///Gweep-creative
+        .setFooter(`${message.author.username} Başarıyla Yardım Komutunu Kullandı!`, message.author.avatarURL)///Gweep-creative
+        .setAuthor('Ticket Bot Yardım Menüsü')///Gweep-creative
+        .setThumbnail('https://i.hizliresim.com/dg9kdN.png')///Gweep-creative
+        .setDescription('Botu Davet Etmek İçin '+ `${prefix}davet` + ' yazabilirisiniz.',false)///Gweep-creative
+        .addField('**__Ekle__**',+ `${prefix}+ ekle @rol #kanal` + 'Ticket a başka birisini/rolü eklersiniz.',true )///Gweep-creative
+        .addField('**__Sil__**','  `sil @etiket #kanal` Ticket a ekli birisini/rolü silersiniz.',true)///Gweep-creative
+        .addField('**__Kapat__**',' `kapat` Ticket ı kapatırsınız.',true)///Gweep-creative
+        .addField('**__Aç__**',' `aç @etiket #kanal` Ticket ı açarsınız.',true)///Gweep-creative
+        .addField('**__Bilet Sil__**',' `bilet-sil` Ticket ı silersiniz.',true)///Gweep-creative
+        .addField('**__Ping__**','`ping` Botun Pingini Gösterir.',true)///Gweep-creative
+        .addField('**__Ticket Kanal__**','  `ticket-kanal [ayarla/sıfırla] (kanal)` Ticket Kanalı Ayarlarınız.',true)///Gweep-creative
+        .addField('**__Ticket__**','  `ticket gönder` Ticket Mesajı Yolar.',false)///Gweep-creative
+        .addField('**__Bilgilendirme__**','  `davet` | Botu Sununuya Davet Edersiniz',true)///Gweep-creative
+message.channel.send(embed)  }  ///Gweep-creative
+///Gweep-creative
+  ///Gweep-creative
+///Gweep-creative
+exports.conf = {///Gweep-creative
+  enabled: true,///Gweep-creative
+  guildOnly: true,///Gweep-creative
+  aliases: ["help"],///Gweep-creative
+  permLevel: 0///Gweep-creative
 }
-
+///Gweep-creative
 exports.help = {
   name: 'yardım'
 };

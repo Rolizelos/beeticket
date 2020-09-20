@@ -41,14 +41,14 @@ if(!ann) return message.channel.send(`Bu bilet senin değil.`)
 ch.overwritePermissions(mt, { 'SEND_MESSAGES': true, 'READ_MESSAGES': true })
 message.delete()
 const emb = new Discord.RichEmbed()
-.setColor('GREEN')
+.setColor('GOLD')
 .setDescription(`${mt}: ${ch} kanalına eklendi.`)
 return message.channel.send(emb) } }
   
 message.channel.overwritePermissions(mt, { 'SEND_MESSAGES': true, 'READ_MESSAGES': true })
 message.delete()
 const emb = new Discord.RichEmbed()
-.setColor('GREEN')
+.setColor('GOLD')
 .setDescription(`${mt}: ${message.channel} kanalına eklendi.`)
 return message.channel.send(emb)
 

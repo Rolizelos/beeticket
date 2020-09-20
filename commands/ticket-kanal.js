@@ -13,7 +13,7 @@ let kanal = message.mentions.channels.first()
 if(!args[1]) return message.channel.send(`Bir kanalı etiketlemelisin.`)
 if(!kanal) return message.channel.send(`Etiketlediğin kanalı bulamıyorum.`)
 data.set(`kanal.${message.guild.id}`, kanal.id)
-message.channel.send(new Discord.RichEmbed().setColor('GREEN').setDescription(`Mesajın kanalı başarıyla ayarlandı: ${prefix}ticket gönder`))
+message.channel.send(new Discord.RichEmbed().setColor('GOLD').setDescription(`Mesajın kanalı başarıyla ayarlandı: ${prefix}ticket gönder`))
 }
 
 if(args[0] === 'sıfırla') {
@@ -21,7 +21,7 @@ const annen = await data.fetch(`kanal.${message.guild.id}`)
 if(!annen) return message.channel.send(`Mesajı göndereceğim kanal zaten ayarlı değil: ${prefix}ticket-kanal sıfırla`)
 
 data.delete(`kanal.${message.guild.id}`)
-message.channel.send(new Discord.RichEmbed().setColor('GREEN').setDescription(`Mesajın kanalı başarıyla sıfırlandı: ${prefix}ticket-kanal ayarla #channel`))
+message.channel.send(new Discord.RichEmbed().setColor('GOLD').setDescription(`Mesajın kanalı başarıyla sıfırlandı: ${prefix}ticket-kanal ayarla #channel`))
 }
 };
 exports.conf = {

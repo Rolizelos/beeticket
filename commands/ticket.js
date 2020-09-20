@@ -9,8 +9,8 @@ const annen = await data.fetch(`kanal.${message.guild.id}`)
 if(!annen) return message.channel.send(`Mesajı göndereceğim kanalı ayarlamamışsın: ${prefix}ticket-kanal ayarla #channel`)
 client.channels.get(annen).send(new Discord.RichEmbed()
 .setTitle(`Ticket Tool`)
-.setFooter(`TicketTool.xyz - Ticketing without clutter.`, client.user.avatarURL)
-.setColor('GREEN')
+.setFooter(`Gweep Creative - Ticket Tool`, client.user.avatarURL)
+.setColor('GOLD')
 .setDescription(`📩 tepkisine tıklayıp bir bilet oluşturabilirsiniz.`)).then(m => {
 m.react('📩')
 let açç = (reaction, user) => reaction.emoji.name === "📩" && user.id !== client.user.id
@@ -37,10 +37,10 @@ if(u.hasPermission('MANAGE_GUILD')) {
 s.overwritePermissions(u, { 'VIEW_CHANNEL':true, 'SEND_MESSAGES':true, 'MANAGE_MESSAGES':true, 'MANAGE_CHANNELS':true }); }})
 s.overwritePermissions(author, { 'VIEW_CHANNEL':true, 'SEND_MESSAGES':true });
 s.send(`${author}, Hoşgeldin!`, new Discord.RichEmbed()
-.setColor('GREEN')
+.setColor('GOLD')
 .setDescription(`Çok yakın zaman da seninle ilgileneceğiz.
 Bileti kapatmak istersen: 🔒`)
-.setFooter(`TicketTool.xyz - Ticketing without clutter`, client.user.avatarURL)).then(m => {
+.setFooter(`Gweep Creative - Ticket Tool`, client.user.avatarURL)).then(m => {
 m.react(`🔒`)
 let si = (reaction, user) => reaction.emoji.name === "🔒" && user.id !== client.user.id
 let s23 = m.createReactionCollector(si, { time: 0 });
