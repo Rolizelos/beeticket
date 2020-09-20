@@ -8,7 +8,7 @@ const embed = new Discord.RichEmbed()///Gweep-creative
         .setAuthor('Ticket Bot Yardım Menüsü')///Gweep-creative
         .setThumbnail('https://i.hizliresim.com/dg9kdN.png')///Gweep-creative
         .setDescription('Botu Davet Etmek İçin '+ `${prefix}davet` + ' yazabilirisiniz.',false)///Gweep-creative
-        .addField('**__Ekle__**',+ `${prefix}+ ekle @rol #kanal` + 'Ticket a başka birisini/rolü eklersiniz.',true )///Gweep-creative
+        .addField('**__Ekle__**','`ekle @rol #kanal` Ticket a başka birisini/rolü eklersiniz.',true )///Gweep-creative
         .addField('**__Sil__**','  `sil @etiket #kanal` Ticket a ekli birisini/rolü silersiniz.',true)///Gweep-creative
         .addField('**__Kapat__**',' `kapat` Ticket ı kapatırsınız.',true)///Gweep-creative
         .addField('**__Aç__**',' `aç @etiket #kanal` Ticket ı açarsınız.',true)///Gweep-creative
