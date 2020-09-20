@@ -4,24 +4,22 @@ const data = require('quick.db')
 exports.run = async (client, message, args) => {
 const prefix = await data.fetch(`prefix.${message.guild.id}`) || client.ayarlar.prefix;
   
-if(!args[0]) {
-  
 const embed = new Discord.RichEmbed()
-.setColor('GREEN')
-.addField(`Yardım Menüsü`, `\`${prefix}yardım komutlar\` - Komutlar hakkında bilgi verir.
-\`${prefix}yardım setup\` - Kurulum hakkında bilgi verir.
-\`${prefix}yardım sss\` - Sıkça sorulan sorular.`)
-
-message.channel.send(embed)  }
-
-if(args[0] === 'komutlar') {
-  
-const embed = new Discord.RichEmbed()
-.setColor('GREEN')
-.setDescription(`() = Tercih.
-[] = Gerekli.`)
+                .setColor('GOLD')
+        .setFooter(`${msg.author.username} Başarıyla Yardım Komutunu Kullandı!`, msg.author.avatarURL)
+        .setAuthor('Friday Bot Yardım Menüsü')
+        .setThumbnail('https://cdn.discordapp.com/avatars/710115789537017926/df3332096163de41401e2c8b317fab8f.png?size=2048')
+        .setDescription('<a:saklan:752896867683270778> Botu Davet Etmek İçin `-davet` yazabilirisiniz.',false)
+        .addField('**__Yetkili Komutlar__**','<a:settings:752896916139802727> `-yetkili`',true )
+        .addField('**__Kullanıcı__**','<a:sguad:720578780422340628>  `-kullanıcı`',true)
+        .addField('**__Eğlence__**','<a:selam:752896916995571985> `-eğlence`',true)
+        .addField('**__Guard__**', '<a:settings:752896916139802727> `-guard`',true)
+        .addField('**__Eklenti__**','<a:sguad:720578780422340628>  `-eklenti`',true)
+        .addField('**__Logo__**', '<a:selam:752896916995571985>  `-logo`',true)
+        .addField('**__Bilgilendirme__**', '<a:sar_partner:753157108861501441>  `-davet` | Botu Sununuya Davet Edersiniz \n<a:sar_partner:753157108861501441> `-botbilgi` | Botun İslatistiklerini Görürsünüz \n <a:sar_partner:753157108861501441> `-sunucu` | Sunucuya Özel Komutlar',true)
+.setImage(`https://cdn.discordapp.com/attachments/748408331571298435/753153313645658142/Friday_Wallpaper.jpg`);
 .addField(`==================================
-Ticket Commands
+          Ticket Commands
 ==================================
 
 \`$ekle [Etiket] (kanal)\``, `*Açıklama: Ticket a başka birisini/rolü eklersiniz.
@@ -50,7 +48,7 @@ Ekstra kullanım: Bulunmuyor.*`)
 message.channel.send(embed)  }  
 
   
-};
+
 exports.conf = {
   enabled: true,
   guildOnly: true,
