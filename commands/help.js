@@ -6,45 +6,19 @@ const prefix = await data.fetch(`prefix.${message.guild.id}`) || client.ayarlar.
   
 const embed = new Discord.RichEmbed()
                 .setColor('GOLD')
-        .setFooter(`${msg.author.username} Başarıyla Yardım Komutunu Kullandı!`, msg.author.avatarURL)
-        .setAuthor('Friday Bot Yardım Menüsü')
+        .setFooter(`${message.author.username} Başarıyla Yardım Komutunu Kullandı!`, message.author.avatarURL)
+        .setAuthor('Ticket Bot Yardım Menüsü')
         .setThumbnail('https://cdn.discordapp.com/avatars/710115789537017926/df3332096163de41401e2c8b317fab8f.png?size=2048')
-        .setDescription('<a:saklan:752896867683270778> Botu Davet Etmek İçin `-davet` yazabilirisiniz.',false)
-        .addField('**__Yetkili Komutlar__**','<a:settings:752896916139802727> `-yetkili`',true )
-        .addField('**__Kullanıcı__**','<a:sguad:720578780422340628>  `-kullanıcı`',true)
-        .addField('**__Eğlence__**','<a:selam:752896916995571985> `-eğlence`',true)
-        .addField('**__Guard__**', '<a:settings:752896916139802727> `-guard`',true)
-        .addField('**__Eklenti__**','<a:sguad:720578780422340628>  `-eklenti`',true)
-        .addField('**__Logo__**', '<a:selam:752896916995571985>  `-logo`',true)
-        .addField('**__Bilgilendirme__**', '<a:sar_partner:753157108861501441>  `-davet` | Botu Sununuya Davet Edersiniz \n<a:sar_partner:753157108861501441> `-botbilgi` | Botun İslatistiklerini Görürsünüz \n <a:sar_partner:753157108861501441> `-sunucu` | Sunucuya Özel Komutlar',true)
-.setImage(`https://cdn.discordapp.com/attachments/748408331571298435/753153313645658142/Friday_Wallpaper.jpg`);
-.addField(`==================================
-          Ticket Commands
-==================================
-
-\`$ekle [Etiket] (kanal)\``, `*Açıklama: Ticket a başka birisini/rolü eklersiniz.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$sil [Etiket] (kanal)\``, `*Açıklama: Ticket a ekli birisini/rolü silersiniz.
-Ekstra kullanım: $kaldır*`)
-
-.addField(`\`$kapat [Etiket] (kanal)\``, `*Açıklama: Ticket ı kapatırsınız.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$aç [Etiket] (kanal)\``, `*Açıklama: Ticket ı açarsınız.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$bilet-sil \``, `*Açıklama: Ticket ı silersiniz.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$ping [gönder])\``, `*Açıklama: Botun pingini gösterir.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$ticket-kanal [ayarla/sıfırla] (kanal)\``, `*Açıklama: Ticket mesajının kanalını ayarlarsınız.
-Ekstra kullanım: Bulunmuyor.*`)
-
-.addField(`\`$ticket [gönder])\``, `*Açıklama: Ticket mesajını yollar.
-Ekstra kullanım: Bulunmuyor.*`)
+        .setDescription('<a:saklan:752896867683270778> Botu Davet Etmek İçin'+ prefix + 'davet yazabilirisiniz.',false)
+        .addField('**__Ekle__**','<a:settings:752896916139802727>'+ prefix + ' `ekle @rol #kanal` Ticket a başka birisini/rolü eklersiniz.',true )
+        .addField('**__Sil__**','<a:sguad:720578780422340628>'+ prefix + '  `sil @etiket #kanal` Ticket a ekli birisini/rolü silersiniz.',true)
+        .addField('**__Kapat__**','<a:selam:752896916995571985>'+ prefix + ' `kapat` Ticket ı kapatırsınız.',true)
+        .addField('**__Aç__**',prefix + ' `aç @etiket #kanal` Ticket ı açarsınız.',true)
+        .addField('**__Bilet Sil__**',prefix + ' `bilet-sil` Ticket ı silersiniz.',true)
+        .addField('**__Ping__**',prefix + ' `ping` Botun Pingini Gösterir.',true)
+        .addField('**__Ticket Kanal__**',prefix + '  `ticket-kanal [ayarla/sıfırla] (kanal)` Ticket Kanalı Ayarlarınız.',true)
+        .addField('**__Ticket__**',prefix + '  `ticket gönder` Ticket Mesajı Yolar.',false)
+        .addField('**__Bilgilendirme__**',prefix + '  `davet` | Botu Sununuya Davet Edersiniz',true)
 message.channel.send(embed)  }  
 
   
