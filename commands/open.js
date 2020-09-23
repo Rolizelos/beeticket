@@ -26,4 +26,4 @@ exports.conf = {
 
 exports.help = {
   name: 'aç'
-};// codare
+};// //RABEL CODE
